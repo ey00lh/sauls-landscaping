@@ -10,27 +10,27 @@
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
-      background: #f5f5f5;
+      background: #f0f8f5;
       color: #333;
     }
 
     header {
-      background-image: url('https://cdn.pixabay.com/photo/2016/07/14/19/46/lawn-1514033_1280.jpg');
+      background-image: url('https://images.unsplash.com/photo-1581592435663-d0051a9c7318?ixlib=rb-4.0.3&auto=format&fit=crop&w=1650&q=80');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       color: white;
-      padding: 80px 20px;
+      padding: 100px 20px 60px;
       text-align: center;
-      text-shadow: 2px 2px 5px #000;
+      text-shadow: 2px 2px 6px #000;
     }
 
     nav {
-      background: #388e3c;
+      background: #2e7d32;
       display: flex;
       justify-content: center;
       gap: 30px;
-      padding: 10px 0;
+      padding: 12px 0;
     }
 
     nav a {
@@ -40,9 +40,14 @@
     }
 
     section {
-      padding: 40px 20px;
-      max-width: 900px;
+      padding: 50px 20px;
+      max-width: 1000px;
       margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
     }
 
     .services {
@@ -59,12 +64,17 @@
       border-radius: 5px;
     }
 
-    .service-card h3::before {
-      content: "🌳 ";
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
     }
 
-    section h2::before {
-      content: "🌿 ";
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      height: 180px;
+      object-fit: cover;
     }
 
     form {
@@ -96,7 +106,6 @@
       color: white;
       text-align: center;
       padding: 40px;
-      text-shadow: 1px 1px #000;
       font-size: 14px;
     }
   </style>
@@ -105,77 +114,84 @@
 
   <header>
     <h1>Saul’s Landscaping Company</h1>
-    <p>Professional Lawn Care & Landscaping in Maryland</p>
+    <p>Serving Pasadena, Glen Burnie, and more with pride 🌱</p>
   </header>
 
   <nav>
     <a href="#home">Home</a>
     <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#quote">Request a Quote</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#quote">Quote</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="home">
-    <h2>Welcome to Saul’s Landscaping</h2>
-    <p>We offer professional landscaping, lawn care, tree work, hardscaping, and snow removal services throughout the 21061 area and beyond. Whether you're looking to maintain your yard or completely transform your outdoor space, we're here to help.</p>
+    <h2>Welcome</h2>
+    <p>Saul's Landscaping is a family-owned business dedicated to providing quality landscaping, lawn care, and outdoor services for homes and businesses across Maryland.</p>
   </section>
 
   <section id="services">
     <h2>Our Services</h2>
     <div class="services">
       <div class="service-card">
-        <h3>Lawn Mowing & Trimming</h3>
-        <p>Precision lawn mowing and edging to keep your yard clean and sharp all season.</p>
+        <h3>Lawn Mowing</h3>
+        <p>Weekly or one-time lawn mowing with trimming and edging.</p>
       </div>
       <div class="service-card">
         <h3>Hardscaping</h3>
-        <p>Stone patios, walkways, retaining walls, and other durable landscape features.</p>
+        <p>We design and install walkways, patios, retaining walls, and more.</p>
       </div>
       <div class="service-card">
         <h3>Tree Work</h3>
-        <p>Tree trimming, removal, and storm cleanup to keep your property safe and tidy.</p>
+        <p>Tree trimming, removal, and maintenance for a safer yard.</p>
       </div>
       <div class="service-card">
         <h3>Snow Removal</h3>
-        <p>Reliable snow plowing and shoveling for driveways, sidewalks, and parking areas.</p>
+        <p>Seasonal snow plowing, salting, and hand shoveling services.</p>
       </div>
     </div>
   </section>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Saul’s Landscaping is a family-run business proudly serving Maryland for over 20 years. Founded by Saul, a hardworking immigrant from Guatemala, we’ve grown to become a trusted name in landscaping across Pasadena, Severna Park, Severn, and Glen Burnie. Today, we continue to uphold our reputation for reliability, honesty, and top-quality results.</p>
+  <section id="gallery">
+    <h2>Project Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1597003818360-6d39e832ec2e" alt="Fresh lawn">
+      <img src="https://images.unsplash.com/photo-1593642634367-d91a135587b5" alt="Backyard transformation">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" alt="Green grass">
+      <img src="https://images.unsplash.com/photo-1617196032294-b8d37d0d37b3" alt="Hardscape path">
+      <img src="https://images.unsplash.com/photo-1616627984281-fb6f6b2b68a9" alt="Landscaping work">
+      <img src="https://images.unsplash.com/photo-1613553480011-d23b46c3f911" alt="Trees and garden">
+    </div>
   </section>
 
   <section id="quote">
-    <h2>Request a Free Quote</h2>
+    <h2>Request a Quote</h2>
     <form action="mailto:Saulslandscaping0@gmail.com" method="POST" enctype="text/plain">
       <label for="name">Name</label>
       <input type="text" name="Name" id="name" required />
 
-      <label for="phone">Phone Number</label>
+      <label for="phone">Phone</label>
       <input type="tel" name="Phone" id="phone" required />
 
       <label for="email">Email</label>
       <input type="email" name="Email" id="email" />
 
       <label for="service">Service Needed</label>
-      <textarea name="Service Needed" id="service" rows="4" placeholder="Tell us about your project..." required></textarea>
+      <textarea name="Service Needed" id="service" rows="4" placeholder="Tell us what you need..." required></textarea>
 
       <button type="submit">Send Request</button>
     </form>
   </section>
 
   <section id="contact">
-    <h2>Contact Us</h2>
+    <h2>Contact Info</h2>
     <p><strong>Phone:</strong> 410-999-7376 or 443-509-4026</p>
     <p><strong>Email:</strong> Saulslandscaping0@gmail.com</p>
-    <p><strong>Service Area:</strong> Pasadena, Severna Park, Severn, Glen Burnie (21061 and surrounding)</p>
+    <p><strong>Serving:</strong> Pasadena, Glen Burnie, Severn, Severna Park</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Saul’s Landscaping Company. All rights reserved.</p>
+    <p>&copy; 2025 Saul’s Landscaping Company. Built with care 🌿</p>
   </footer>
 
 </body>
