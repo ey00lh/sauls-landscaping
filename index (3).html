@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saul's Landscaping Company</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f0fdf4;
+      color: #333;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #4caf50;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      padding: 2rem;
+    }
+    .section h2 {
+      color: #2e7d32;
+      margin-bottom: 1rem;
+    }
+    .services ul {
+      list-style-type: square;
+      margin-left: 2rem;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 0.75rem 1.5rem;
+      border: none;
+      background-color: #2e7d32;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1b5e20;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #2e7d32;
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Saul's Landscaping Company</h1>
+    <p>Pasadena · Severna Park · Severn · Glen Burnie</p>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#quote">Request a Quote</a>
+  </nav>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>With years of experience and deep roots in the community, Saul's Landscaping provides expert lawn care, hardscaping, snow removal, and tree work. Our family-owned business is proud to serve Pasadena, Severna Park, Severn, and Glen Burnie (21061 area).</p>
+  </section>
+
+  <section id="services" class="section services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Lawn mowing & trimming</li>
+      <li>Hardscaping & pavers</li>
+      <li>Snow removal</li>
+      <li>Tree trimming & removal</li>
+      <li>Mulching & yard cleanup</li>
+    </ul>
+  </section>
+
+  <section id="quote" class="section">
+    <h2>Request a Free Quote</h2>
+    <form name="quote-request" method="POST" netlify action="/thank-you.html">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone Number" required />
+      <textarea name="message" rows="5" placeholder="Tell us about the service you need..." required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>📞 410-999-7376 · 443-509-4026 | 📧 Saulslandscaping0@gmail.com</p>
+    <p>© 2025 Saul’s Landscaping Company</p>
+  </footer>
+</body>
+</html>
